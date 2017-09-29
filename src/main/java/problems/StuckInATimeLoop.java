@@ -9,9 +9,12 @@ public class StuckInATimeLoop {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int target = scanner.nextInt();
+        StringBuilder stringBuilder = new StringBuilder();
 
         for (int i = 1; i <= target; i++) {
-            System.out.println(i + " Abracadabra");
+            stringBuilder.append(i).append(" Abracadabra\n");
         }
+
+        System.out.println(stringBuilder.toString());
     }
 }
