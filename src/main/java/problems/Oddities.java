@@ -8,12 +8,11 @@ import java.util.Scanner;
 public class Oddities {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int numberOfInputs = scanner.nextInt();
+        scanner.nextInt();  // flush the number of test cases that follow
 
         while (scanner.hasNext()) {
             int value = scanner.nextInt();
-            String type = value % 2 == 0 ? "even" : "odd";
-            System.out.println(value + " is " + type);
+            System.out.println(value + " is " + (value % 2 == 0 ? "even" : "odd"));
         }
     }
 }
