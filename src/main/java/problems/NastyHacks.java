@@ -1,7 +1,5 @@
 package problems;
 
-import java.util.Scanner;
-
 public class NastyHacks {
 
     private static final String EITHER = "does not matter";
@@ -9,11 +7,11 @@ public class NastyHacks {
     private static final String NO_AD = "do not advertise";
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        scanner.nextInt();
+        Kattio kattio = new Kattio(System.in);
+        kattio.getInt();
 
-        while (scanner.hasNext()) {
-            System.out.println(decide(scanner.nextInt(), scanner.nextInt(), scanner.nextInt()));
+        while (kattio.hasMoreTokens()) {
+            System.out.println(decide(kattio.getInt(), kattio.getInt(), kattio.getInt()));
         }
     }
 
