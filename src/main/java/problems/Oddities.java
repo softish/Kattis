@@ -8,11 +8,25 @@ import java.util.Scanner;
 public class Oddities {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        scanner.nextInt();  // flush the number of test cases that follow
+        System.out.println("Oddity checker, press [Q] to quit, [Enter] to start");
+        scanner.nextLine();  // flush the number of test cases that follow
 
+        System.out.print("$");
         while (scanner.hasNext()) {
-            int value = scanner.nextInt();
-            System.out.println(value + " is " + (value % 2 == 0 ? "even" : "odd"));
+            try {
+                String string = scanner.next();
+
+                if(string.equalsIgnoreCase("q")) {
+                    System.out.println("Terminating ...");
+                    break;
+                }
+
+                int value = Integer.parseInt(string);
+                System.out.println(value + " is " + (value % 2 == 0 ? "even" : "odd"));
+            } catch (NumberFormatException e) {
+                System.err.println("Only integers are supported");
+            }
+            System.out.print("$");
         }
     }
 }
