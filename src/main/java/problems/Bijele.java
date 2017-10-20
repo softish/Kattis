@@ -1,7 +1,5 @@
 package problems;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -9,7 +7,6 @@ import java.util.Scanner;
  */
 public class Bijele {
 
-    private static Map<ChessPiece, Integer> chessPieceSetMap;
     private static int[] delta;
 
     public static void main(String[] args) {
@@ -33,29 +30,32 @@ public class Bijele {
     private static void calculateDeltas(String[] pieces, ChessPiece[] values) {
         for (int i = 0; i < pieces.length; i++) {
             int actualCount = Integer.parseInt(pieces[i]);
-            int referenceCount = chessPieceSetMap.get(values[i]);
+            int referenceCount = values[i].getAmount();
 
             delta[i] = referenceCount - actualCount;
         }
     }
 
     static {
-        chessPieceSetMap = new HashMap<>();
         delta = new int[ChessPiece.values().length];
-        chessPieceSetMap.put(ChessPiece.KING, 1);
-        chessPieceSetMap.put(ChessPiece.QUEEN, 1);
-        chessPieceSetMap.put(ChessPiece.ROOK, 2);
-        chessPieceSetMap.put(ChessPiece.BISHOP, 2);
-        chessPieceSetMap.put(ChessPiece.KNIGHT, 2);
-        chessPieceSetMap.put(ChessPiece.PAWN, 8);
     }
 
     enum ChessPiece {
-        KING,
-        QUEEN,
-        ROOK,
-        BISHOP,
-        KNIGHT,
-        PAWN
+        KING(1),
+        QUEEN(1),
+        ROOK(2),
+        BISHOP(2),
+        KNIGHT(2),
+        PAWN(8);
+
+        private final int amount;
+
+        ChessPiece(int amount) {
+            this.amount = amount;
+        }
+
+        int getAmount() {
+            return amount;
+        }
     }
 }
