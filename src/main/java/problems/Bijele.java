@@ -42,20 +42,20 @@ public class Bijele {
     static {
         chessPieceSetMap = new HashMap<>();
         delta = new int[ChessPiece.values().length];
-        chessPieceSetMap.put(ChessPiece.King, 1);
-        chessPieceSetMap.put(ChessPiece.Queen, 1);
-        chessPieceSetMap.put(ChessPiece.Rook, 2);
-        chessPieceSetMap.put(ChessPiece.Bishop, 2);
-        chessPieceSetMap.put(ChessPiece.Knight, 2);
-        chessPieceSetMap.put(ChessPiece.Pawn, 8);
+        chessPieceSetMap.put(ChessPiece.KING, 1);
+        chessPieceSetMap.put(ChessPiece.QUEEN, 1);
+        chessPieceSetMap.put(ChessPiece.ROOK, 2);
+        chessPieceSetMap.put(ChessPiece.BISHOP, 2);
+        chessPieceSetMap.put(ChessPiece.KNIGHT, 2);
+        chessPieceSetMap.put(ChessPiece.PAWN, 8);
     }
 
     enum ChessPiece {
-        King,
-        Queen,
-        Rook,
-        Bishop,
-        Knight,
-        Pawn
+        KING,
+        QUEEN,
+        ROOK,
+        BISHOP,
+        KNIGHT,
+        PAWN
     }
 }
