@@ -1,11 +1,5 @@
 *.class
 
-# Hidden
-src/main/java/PAT/
-src/test/java/PAT/
-src/main/java/playground/
-
-
 # Eclipse
 .classpath
 .project
