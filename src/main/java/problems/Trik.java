@@ -8,11 +8,10 @@ import java.util.Scanner;
 public class Trik {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        int currentIndex = 1;
 
         while (scanner.hasNext()) {
             String line = scanner.nextLine();
-
-            int currentIndex = 1;
 
             for (Character character : line.toCharArray()) {
                 if (character.equals('A') && currentIndex == 1) {
