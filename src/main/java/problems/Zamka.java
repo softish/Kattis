@@ -48,33 +48,4 @@ public class Zamka {
             return sumOfDigits(n / 10, sum + n % 10, ++i);
         }
     }
-
-    protected static int findMin(int[] ldx) {
-        for (int i = ldx[0]; i <= ldx[1]; i++) {
-            if (sumOfDigits(i) == ldx[2]) {
-                return i;
-            }
-        }
-
-        return -1;
-    }
-
-    protected static int findMax(int[] ldx) {
-        for (int i = ldx[1]; i >= ldx[0]; i--) {
-            if (sumOfDigits(i) == ldx[2]) {
-                return i;
-            }
-        }
-
-        return -1;
-    }
-
-    protected static int sumOfDigitsIterative(int n) {
-        int sum = 0;
-        for (int i = 1; i < Math.log(Integer.MAX_VALUE); i++) {
-            sum += n % 10;
-            n /= 10;
-        }
-        return sum;
-    }
 }
