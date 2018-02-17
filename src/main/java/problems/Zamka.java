@@ -44,8 +44,8 @@ public class Zamka {
     private static int sumOfDigits(int n, int sum, int i) {
         if (i > Math.log(Integer.MAX_VALUE)) {
             return sum;
-        } else {
-            return sumOfDigits(n / 10, sum + n % 10, ++i);
         }
+
+        return sumOfDigits(n / 10, sum + n % 10, ++i);
     }
 }
