@@ -26,24 +26,28 @@ public class TheEasiestProblemIsThisOne {
             throw new IllegalArgumentException("Argument must be greater than zero.");
         }
 
-        for (int p = 11; p < 100_000; p++) {
-            if (digitSum(n * p) == digitSum(n)) {
-                return p;
-            }
-        }
+        return findDigitSumFactor(n, 11);
+    }
 
-        return -1;
+    private static int findDigitSumFactor(int n, int p) {
+        if (digitSum(n * p) == digitSum(n)) {
+            return p;
+        } else if (p > 100_000) {
+            return -1;
+        } else {
+            return findDigitSumFactor(n, p + 1);
+        }
     }
 
     static int digitSum(int number) {
-        int sum = 0;
-        int auxNumber = number;
+        return digitSum(number, 0, number, 0);
+    }
 
-        for (int i = 0; i < String.valueOf(number).length(); i++) {
-            sum += auxNumber % 10;
-            auxNumber /= 10;
+    private static int digitSum(int number, int sum, int auxNumber, int i) {
+        if (i >= String.valueOf(number).length()) {
+            return sum;
+        } else {
+            return digitSum(number, sum + auxNumber % 10, auxNumber / 10, ++i);
         }
-
-        return sum;
     }
 }
