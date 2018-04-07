@@ -44,6 +44,10 @@ public class TheEasiestProblemIsThisOne {
     }
 
     private static int digitSum(int number, int sum, int auxNumber, int i) {
-        return i >= String.valueOf(number).length() ? sum : digitSum(number, sum + auxNumber % 10, auxNumber / 10, ++i);
+        if (i >= String.valueOf(number).length()) {
+            return sum;
+        } else {
+            return digitSum(number, sum + auxNumber % 10, auxNumber / 10, ++i);
+        }
     }
 }
