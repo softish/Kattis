@@ -22,18 +22,22 @@ public class Bijele {
     }
 
     private static void displayResults() {
-        for (int i = 0; i < delta.length; i++) {
-            System.out.print(delta[i] + " ");
+        for (int aDelta : delta) {
+            System.out.print(aDelta + " ");
         }
     }
 
-    private static void calculateDeltas(String[] pieces, ChessPiece[] values) {
+    static void calculateDeltas(String[] pieces, ChessPiece[] values) {
         for (int i = 0; i < pieces.length; i++) {
             int actualCount = Integer.parseInt(pieces[i]);
             int referenceCount = values[i].getAmount();
 
             delta[i] = referenceCount - actualCount;
         }
+    }
+
+    public static int[] getDelta() {
+        return delta;
     }
 
     static {
