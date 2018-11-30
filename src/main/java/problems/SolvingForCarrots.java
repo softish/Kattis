@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by softish on 2017-09-29.
  */
-public class SolvingForCarrots {
+class SolvingForCarrots {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

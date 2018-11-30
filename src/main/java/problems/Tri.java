@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 /**
  * Created by softish on 2018-02-17.
  */
-public class Tri {
+class Tri {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

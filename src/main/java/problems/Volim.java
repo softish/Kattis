@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * Created by softish on 2018-04-07.
  */
-public class Volim {
+class Volim {
 
     private static final int GAME_DURATION = 3 * 60 + 30;
 

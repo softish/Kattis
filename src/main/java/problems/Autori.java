@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by softish on 2017-11-04.
  */
-public class Autori {
+class Autori {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

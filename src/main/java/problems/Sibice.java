@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by softish on 2018-07-07.
  */
-public class Sibice {
+class Sibice {
 
     private int boxWidth;
     private int boxHeight;

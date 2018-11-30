@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by softish on 2017-09-29.
  */
-public class QuadrantSelection {
+class QuadrantSelection {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

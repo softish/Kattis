@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by softish on 2017-11-04.
  */
-public class Trik {
+class Trik {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         CupHandler cupHandler = new CupHandler();
@@ -106,19 +106,19 @@ class CupHandler {
         currentState = new CupOne();
     }
 
-    public void invokeActionA() {
+    void invokeActionA() {
         currentState = currentState.actionA();
     }
 
-    public void invokeActionB() {
+    void invokeActionB() {
         currentState = currentState.actionB();
     }
 
-    public void invokeActionC() {
+    void invokeActionC() {
         currentState = currentState.actionC();
     }
 
-    public int getCurrentIndex() {
+    int getCurrentIndex() {
         return currentState.getCurrentIndex();
     }
 }

@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by softish on 2017-10-20.
  */
-public class ColdputerScience {
+class ColdputerScience {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         scanner.nextInt();

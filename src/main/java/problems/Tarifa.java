@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by softish on 2017-09-29.
  */
-public class Tarifa {
+class Tarifa {
 
     private int monthlyTarget;
     private int nrOfMonthsActive;
@@ -40,19 +40,19 @@ public class Tarifa {
         System.out.println(tarifa.surfLeft());
     }
 
-    public int surfLeft() {
+    int surfLeft() {
         return monthlyTarget * (nrOfMonthsActive + 1) - totalExpenditure;
     }
 
-    public void setMonthlyTarget(int monthlyTarget) {
+    void setMonthlyTarget(int monthlyTarget) {
         this.monthlyTarget = monthlyTarget;
     }
 
-    public void setNrOfMonthsActive(int nrOfMonthsActive) {
+    void setNrOfMonthsActive(int nrOfMonthsActive) {
         this.nrOfMonthsActive = nrOfMonthsActive;
     }
 
-    public void addToTotalExpenditure(int totalExpenditure) {
+    void addToTotalExpenditure(int totalExpenditure) {
         this.totalExpenditure += totalExpenditure;
     }
 }

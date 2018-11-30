@@ -1,6 +1,6 @@
 package problems;
 
-public class NastyHacks {
+class NastyHacks {
 
     private static final String EITHER = "does not matter";
     private static final String AD = "advertise";

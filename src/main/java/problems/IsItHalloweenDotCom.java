@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by softish on 2018-11-30.
  */
-public class IsItHalloweenDotCom {
+class IsItHalloweenDotCom {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

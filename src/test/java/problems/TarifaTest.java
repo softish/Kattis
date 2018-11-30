@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import java.io.*;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by softish on 2017-09-29.
@@ -14,37 +14,36 @@ import static org.junit.Assert.*;
 public class TarifaTest {
 
     private Tarifa tarifa;
-    private InputStream inputStream;
     private InputStream oldInputStream;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         tarifa = new Tarifa();
         oldInputStream = System.in;
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
         System.setIn(oldInputStream);
         System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out)));
     }
 
     @Test
-    public void surfLeft() throws Exception {
+    public void surfLeft() {
         String data =
                 "10\n" +
                 "3\n" +
                 "4\n" +
                 "6\n" +
                 "2";
-        inputStream = new ByteArrayInputStream(data.getBytes());
+        InputStream inputStream = new ByteArrayInputStream(data.getBytes());
         System.setIn(inputStream);
         Tarifa.main(null);
         assertEquals(0,tarifa.surfLeft());
     }
 
     @Test
-    public void surfLeft1() throws Exception {
+    public void surfLeft1() {
         tarifa.setMonthlyTarget(10);
         tarifa.setNrOfMonthsActive(3);
         tarifa.addToTotalExpenditure(4);
@@ -54,7 +53,7 @@ public class TarifaTest {
     }
 
     @Test
-    public void surfLeft2() throws Exception {
+    public void surfLeft2() {
         tarifa.setMonthlyTarget(10);
         tarifa.setNrOfMonthsActive(3);
         tarifa.addToTotalExpenditure(10);
@@ -64,7 +63,7 @@ public class TarifaTest {
     }
 
     @Test
-    public void surfLeft3() throws Exception {
+    public void surfLeft3() {
         tarifa.setMonthlyTarget(15);
         tarifa.setNrOfMonthsActive(3);
         tarifa.addToTotalExpenditure(15);
@@ -74,7 +73,7 @@ public class TarifaTest {
     }
 
     @Test
-    public void surfLeft4() throws Exception {
+    public void surfLeft4() {
         tarifa.setMonthlyTarget(15);
         tarifa.setNrOfMonthsActive(1);
         tarifa.addToTotalExpenditure(20);
@@ -82,7 +81,7 @@ public class TarifaTest {
     }
 
     @Test
-    public void surfLeft5() throws Exception {
+    public void surfLeft5() {
         tarifa.setMonthlyTarget(15);
         tarifa.setNrOfMonthsActive(0);
         tarifa.addToTotalExpenditure(0);

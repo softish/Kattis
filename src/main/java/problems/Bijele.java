@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 public class Bijele {
 
-    private static int[] delta;
+    private static final int[] delta;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -36,7 +36,7 @@ public class Bijele {
         }
     }
 
-    public static int[] getDelta() {
+    static int[] getDelta() {
         return delta;
     }
 

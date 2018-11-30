@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by softish on 2018-02-17.
  */
-public class Zamka {
+class Zamka {
 
     private static final int NUM_INPUTS = 3;
 
@@ -37,7 +37,7 @@ public class Zamka {
         return integer;
     }
 
-    protected static int sumOfDigits(int n) {
+    static int sumOfDigits(int n) {
         return sumOfDigits(n, 0, 1);
     }
 

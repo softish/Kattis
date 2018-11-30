@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by softish on 2018-04-03.
  */
-public class Ladder {
+class Ladder {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

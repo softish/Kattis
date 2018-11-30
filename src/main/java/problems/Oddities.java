@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by softish on 2017-09-30.
  */
-public class Oddities {
+class Oddities {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Oddity checker, press [Q] to quit, [Enter] to start");

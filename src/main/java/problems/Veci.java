@@ -5,9 +5,9 @@ import java.util.*;
 /**
  * Created by softish on 2018-05-10.
  */
-public class Veci {
+class Veci {
 
-    private static Set<Integer> permutationsOfNumber;
+    private static final Set<Integer> permutationsOfNumber;
 
     static {
         permutationsOfNumber = new HashSet<>();

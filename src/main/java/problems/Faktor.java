@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by softish on 2017-10-02.
  */
-public class Faktor {
+class Faktor {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

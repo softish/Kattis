@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by softish on 2017-09-29.
  */
-public class R2 {
+class R2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String[] inputComponents = scanner.nextLine().split(" ");

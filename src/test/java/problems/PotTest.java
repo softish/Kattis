@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by softish on 2017-09-29.
@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 public class PotTest {
 
     @Test
-    public void calculateSumSampleInput1() throws Exception {
+    public void calculateSumSampleInput1() {
         List<Integer> values = new ArrayList<>();
         List<Integer> powers = new ArrayList<>();
 
@@ -27,7 +27,7 @@ public class PotTest {
     }
 
     @Test
-    public void calculateSumSampleInput2() throws Exception {
+    public void calculateSumSampleInput2() {
         List<Integer> values = new ArrayList<>();
         List<Integer> powers = new ArrayList<>();
 
@@ -47,7 +47,7 @@ public class PotTest {
     }
 
     @Test
-    public void calculateSumSampleInput3() throws Exception {
+    public void calculateSumSampleInput3() {
         List<Integer> values = new ArrayList<>();
         List<Integer> powers = new ArrayList<>();
 

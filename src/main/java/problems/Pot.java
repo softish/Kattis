@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * Created by softish on 2017-09-29.
  */
-public class Pot {
+class Pot {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int numberOfEntries = scanner.nextInt();
@@ -29,7 +29,7 @@ public class Pot {
                 break;
 
             int number = Integer.parseInt(input.substring(0, input.length() - 1));
-            int power = Integer.parseInt(input.substring(input.length() - 1, input.length()));
+            int power = Integer.parseInt(input.substring(input.length() - 1));
             numbers.add(number);
             powers.add(power);
         }
