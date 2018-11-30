@@ -28,23 +28,23 @@ public class Trik {
     }
 }
 
-abstract class State {
-    public abstract int getCurrentIndex();
+interface State {
+    int getCurrentIndex();
 
-    public State actionA() {
+    default State actionA() {
         return this;
     }
 
-    public State actionB() {
+    default State actionB() {
         return this;
     }
 
-    public State actionC() {
+    default State actionC() {
         return this;
     }
 }
 
-class CupOne extends State {
+class CupOne implements State {
 
     @Override
     public int getCurrentIndex() {
@@ -62,7 +62,7 @@ class CupOne extends State {
     }
 }
 
-class CupTwo extends State {
+class CupTwo implements State {
 
     @Override
     public int getCurrentIndex() {
@@ -81,7 +81,7 @@ class CupTwo extends State {
 }
 
 
-class CupThree extends State {
+class CupThree implements State {
 
     @Override
     public int getCurrentIndex() {
