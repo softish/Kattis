@@ -16,6 +16,6 @@ public class Ladder {
 
     static int ladderHeight(double h, double v) {
         double result = h / Math.sin(Math.toRadians(v));
-        return Double.valueOf(Math.ceil(result)).intValue();
+        return (int) Math.ceil(result);
     }
 }
