@@ -10,11 +10,11 @@ public class R2 {
         Scanner scanner = new Scanner(System.in);
         String[] inputComponents = scanner.nextLine().split(" ");
 
-        int R1 = Integer.parseInt(inputComponents[0]);
-        int S = Integer.parseInt(inputComponents[1]);
+        int r1 = Integer.parseInt(inputComponents[0]);
+        int s = Integer.parseInt(inputComponents[1]);
 
-        int R2 = 2 * S - R1;
+        int r2 = 2 * s - r1;
 
-        System.out.println(R2);
+        System.out.println(r2);
     }
 }
