@@ -1,5 +1,7 @@
 package problems;
 
+import lib.Kattio;
+
 class NastyHacks {
 
     private static final String EITHER = "does not matter";
