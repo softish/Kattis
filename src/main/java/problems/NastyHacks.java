@@ -15,6 +15,8 @@ class NastyHacks {
         while (kattio.hasMoreTokens()) {
             System.out.println(decide(kattio.getInt(), kattio.getInt(), kattio.getInt()));
         }
+
+        kattio.close();
     }
 
     private static String decide(int revenueWithoutAd, int revenueWhenUsingAd, int costOfAd) {
