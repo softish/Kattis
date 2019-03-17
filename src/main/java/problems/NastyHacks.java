@@ -10,10 +10,12 @@ class NastyHacks {
 
     public static void main(String[] args) {
         Kattio kattio = new Kattio(System.in);
-        kattio.getInt();
+        int totalNumberOfRows = kattio.getInt(); // get past line showing number of rows
+        int numberOfRows = 0;
 
-        while (kattio.hasMoreTokens()) {
+        while (kattio.hasMoreTokens() && numberOfRows < totalNumberOfRows) {
             System.out.println(decide(kattio.getInt(), kattio.getInt(), kattio.getInt()));
+            numberOfRows++;
         }
 
         kattio.close();
