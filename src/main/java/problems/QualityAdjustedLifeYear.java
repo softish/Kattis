@@ -24,11 +24,7 @@ public class QualityAdjustedLifeYear {
 
     public static double calculateQALY(double[][] values) {
         return Arrays.stream(values)
-                .flatMapToDouble(value -> calculatePeriod(value[0], value[1]))
+                .flatMapToDouble(period -> DoubleStream.of(Arrays.stream(period).reduce(1, (q, y) -> q * y)))
                 .sum();
-    }
-
-    static DoubleStream calculatePeriod(double qualityOfLife, double numYears) {
-        return DoubleStream.of(qualityOfLife * numYears);
     }
 }
