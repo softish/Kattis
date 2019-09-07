@@ -10,27 +10,15 @@ import static org.junit.Assert.assertEquals;
 public class SpavanacTest {
 
     @Test
-    public void test45minRewind() {
-        String resultingTime = Spavanac.rewindTimeByFactor("10 10");
-        assertEquals("9 25", resultingTime);
-    }
-
-    @Test
-    public void test24HourWrapping() {
-        String result = Spavanac.rewindTimeByFactor("0 30");
-        assertEquals("23 45", result);
-    }
-
-    @Test
-    public void testLateEvening() {
+    public void testDoubleDigitResult() {
         String result = Spavanac.rewindTimeByFactor("23 40");
         assertEquals("22 55", result);
     }
 
     @Test
-    public void testEarlyMorning() {
-        String result = Spavanac.rewindTimeByFactor("1 0");
-        assertEquals("0 15", result);
+    public void testOnlySingleDigitInput() {
+        String result = Spavanac.rewindTimeByFactor("1 1");
+        assertEquals("0 16", result);
     }
 
     @Test
@@ -43,12 +31,6 @@ public class SpavanacTest {
     public void testMidnight() {
         String result = Spavanac.rewindTimeByFactor("0 0");
         assertEquals("23 15", result);
-    }
-
-    @Test
-    public void testOneMinuteAfterMidnight() {
-        String result = Spavanac.rewindTimeByFactor("0 1");
-        assertEquals("23 16", result);
     }
 
     @Test
@@ -65,6 +47,11 @@ public class SpavanacTest {
     @Test(expected = DateTimeParseException.class)
     public void testTripleInput() {
         Spavanac.rewindTimeByFactor("10 20 30");
+    }
+
+    @Test(expected = DateTimeParseException.class)
+    public void testOtherInputFormat() {
+        Spavanac.rewindTimeByFactor("10:20");
     }
 
     @Test(expected = DateTimeParseException.class)
